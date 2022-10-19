@@ -1,5 +1,11 @@
-ul {
-    margin: 0;
-    padding: 0 0 56px 0;
-    list-style: none;
-  }
+.list {
+  list-style: none;
+  margin: auto;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}

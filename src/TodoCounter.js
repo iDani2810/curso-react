@@ -1,10 +1,10 @@
 import React from 'react';
 import './TodoCounter.css';
 
-function TodoCounter(){
+function TodoCounter({ total, completed }){
     return (
-        <h2 className='TodoCounter'>Has completado 2 de 3 ToDos</h2>
+        <p className='TodoCounter'>Completed {completed} to {total}</p>
     );
 }
 
-export {TodoCounter};
+export { TodoCounter };
