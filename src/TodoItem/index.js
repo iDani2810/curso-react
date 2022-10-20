@@ -1,25 +1,16 @@
 import React from 'react';
 import './TodoItem.css';
 
-function TodoItem(props) {
-
-  const onComplete = () => {
-    alert('Ya completaste el ToDo ' + props.text);
-  }
-
-  const onDelete = () => {
-    alert('Borraste el ToDo ' + props.text);
-  }
-  
+function TodoItem({text, completed,onComplete, onDelete}) {
   return (
-    <li className={`todo-item ${props.completed && 'todo-item--completed'}`}>
+    <li className={`todo-item ${completed && 'todo-item--completed'}`}>
       <span 
-        className={`todo-check ${props.completed && 'check--checked'}`}
+        className={`todo-check ${completed && 'check--checked'}`}
         onClick = {onComplete}
       >
         ᄼ
       </span>
-      <p className={`todo-text ${props.completed && 'todo-text--completed'}`}>{props.text}</p>
+      <p className={`todo-text ${completed && 'todo-text--completed'}`}>{text}</p>
       <svg 
         xmlns="http://www.w3.org/2000/svg" 
         fill="currentColor" 
